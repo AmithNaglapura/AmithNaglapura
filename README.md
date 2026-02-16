@@ -16,14 +16,18 @@
 ```
 
 <div align="center">
-  
-[![Typing SVG](https://readme-typing-svg.demolab.czom?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=39FF14&center=true&vCenter=true&width=700&lines=Translating+Financial+Data+into+AI+Strategy;Building+Intelligent+Systems;Gen-AI+%7C+FinTech+%7C+Cloud+Architecture)](https://git.io/typing-svg)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amithnaglaupra/)
-[![Email](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amithnaglapura@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amithnaglapura)
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=39FF14&center=true&vCenter=true&width=700&lines=Translating+Financial+Data+into+AI+Strategy;Building+Intelligent+Systems;Gen-AI+%7C+FinTech+%7C+Cloud+Architecture" alt="Typing SVG" />
 
-<img src="https://komarev.com/ghpvc/?username=amithnaglapura&label=VIEWS&color=39FF14&style=flat-square" alt="Profile Views" />
+<br>
+
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amithnaglaupra/)
+[![Email](https://img.shields.io/badge/GMAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amithnaglapura@gmail.com)
+[![GitHub](https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amithnaglapura)
+
+<br>
+
+![Profile Views](https://komarev.com/ghpvc/?username=amithnaglapura&label=VIEWS&color=39FF14&style=flat-square)
 
 </div>
 
@@ -31,110 +35,275 @@
 
 ## 🎯 MISSION_BRIEF
 
-> **"Where Finance Meets Intelligence"**
+<div align="center">
 
-AI strategist bridging Wall Street and Silicon Valley. Building intelligent systems that transform complex financial data into actionable insights—from DCF modeling to generative AI fraud detection.
+> **"Where Finance Meets Intelligence"**
+> 
+> AI strategist bridging Wall Street and Silicon Valley. Building intelligent systems that transform  
+> complex financial data into actionable insights—from DCF modeling to generative AI fraud detection.
+
+</div>
 
 ```python
-expertise = {
-    "financial": ["DCF Modeling", "Revenue Forecasting", "Risk Assessment"],
-    "ai_ml": ["PyTorch", "LLMs", "ML Pipelines"],
-    "cloud": ["AWS", "Docker", "Microservices"],
-    "data": ["Python", "SQL", "Tableau"]
-}
+class Expertise:
+    financial = ["DCF Modeling", "Revenue Forecasting", "Risk Assessment"]
+    ai_ml = ["PyTorch", "LLMs", "ML Pipelines", "Computer Vision"]
+    cloud = ["AWS", "Docker", "Microservices", "Kubernetes"]
+    data = ["Python", "SQL", "Tableau", "ETL Pipelines"]
 ```
 
 ---
 
 ## 🛠️ TECH_ARSENAL
 
+<div align="center">
+
+**AI/ML & Data Science**
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![scikit--learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+
+**Development & Engineering**
+
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+
+**Cloud & Database**
+
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+
+**Analytics & Tools**
+
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![Bloomberg](https://img.shields.io/badge/Bloomberg_Terminal-000000?style=flat-square&logoColor=white)
+
+</div>
 
 ---
 
-## 🏆 ACHIEVEMENTS
+## 🏆 ACHIEVEMENTS :: UNLOCKED
+
+<div align="center">
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
-### 🥉 AWS Hackathon Winner
-Gen-AI fraud detection with explainable AI
+<img src="https://img.icons8.com/color/48/000000/trophy.png" width="40"/> **AWS Hackathon Winner**
+
 ```yaml
-Tech: AWS | LLMs | Python
+Project: Gen-AI Fraud Detection System
+Award: 🥉 Third Place National Winner
 ```
 
-### 🎓 MSc AI in Business @ QUB
-AI strategy & implementation specialist
+**Key Achievements:**
+- ✅ Built explainable AI for fraud analysis
+- ✅ Human-readable risk assessments  
+- ✅ Real-time detection capabilities
+
+**Tech Stack:** `AWS` `LLMs` `Python` `Lambda`
+
+---
+
+<img src="https://img.icons8.com/fluency/48/000000/graduation-cap.png" width="40"/> **MSc AI in Business**
+
 ```yaml
-Focus: Corporate AI frameworks
+Institution: Queen's University Belfast
+Status: 🟢 Currently Pursuing
+Specialization: AI Strategy & Implementation
 ```
+
+**Focus Areas:**
+- 🎯 Corporate AI frameworks
+- 🎯 Business transformation
+- 🎯 Strategic deployment
 
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
-### 📈 Finance Analyst @ QSMF
-Bloomberg Terminal | DCF Valuation
+<img src="https://img.icons8.com/fluency/48/000000/parse-from-clipboard.png" width="40"/> **Finance Analyst**
+
 ```yaml
-Skills: Equity analysis & forecasting
+Organization: QSMF Investment Fund
+Role: Financial Analyst & Researcher
+Tools: Bloomberg Terminal | Excel VBA
 ```
 
-### 🔬 Published Researcher
-ML for crop disease detection
+**Responsibilities:**
+- 📊 DCF modeling & valuation
+- 📊 Equity analysis & forecasting
+- 📊 Revenue projection models
+
+**Impact:** Market analysis for $X portfolio
+
+---
+
+<img src="https://img.icons8.com/fluency/48/000000/research.png" width="40"/> **Published Researcher**
+
 ```yaml
-Publication: IJMR
+Publication: IJMR (International Journal)
+Domain: Agricultural AI & Computer Vision
+Citation: Available on Google Scholar
 ```
+
+**Research Contributions:**
+- 🔬 ML for agricultural applications
+- 🔬 Crop disease detection systems
+- 🔬 Deep learning optimization
 
 </td>
 </tr>
 </table>
 
+</div>
+
 ---
 
-## 💡 CORE_VALUES
+## 💡 CORE_VALUES :: OPERATING_PRINCIPLES
 
 <div align="center">
 
-| 📊 PRAGMATISM | 🔥 RESILIENCE | ⚡ EXECUTION | 💡 INNOVATION |
-|:---:|:---:|:---:|:---:|
-| Data-Driven | Continuous Learning | Ship Fast | AI First |
-| Real Solutions | Adaptation | Iterate Often | Cloud Native |
-| Measurable Impact | Problem Solving | Deliver Value | User Centric |
+<table>
+<tr>
+<td align="center" width="25%" style="border: 2px solid #39FF14; padding: 20px;">
+<img src="https://img.icons8.com/fluency/96/000000/bar-chart.png" width="80" height="80" alt="Pragmatism"/>
+<h3>📊 PRAGMATISM</h3>
+<p align="left">
+<code>✓</code> Data-Driven Decisions<br>
+<code>✓</code> Real-World Solutions<br>
+<code>✓</code> Measurable Impact
+</p>
+</td>
+<td align="center" width="25%" style="border: 2px solid #39FF14; padding: 20px;">
+<img src="https://img.icons8.com/fluency/96/000000/fire-element.png" width="80" height="80" alt="Resilience"/>
+<h3>🔥 RESILIENCE</h3>
+<p align="left">
+<code>✓</code> Continuous Learning<br>
+<code>✓</code> Rapid Adaptation<br>
+<code>✓</code> Problem Solving
+</p>
+</td>
+<td align="center" width="25%" style="border: 2px solid #39FF14; padding: 20px;">
+<img src="https://img.icons8.com/fluency/96/000000/rocket.png" width="80" height="80" alt="Execution"/>
+<h3>⚡ EXECUTION</h3>
+<p align="left">
+<code>✓</code> Ship Fast<br>
+<code>✓</code> Iterate Often<br>
+<code>✓</code> Deliver Value
+</p>
+</td>
+<td align="center" width="25%" style="border: 2px solid #39FF14; padding: 20px;">
+<img src="https://img.icons8.com/fluency/96/000000/idea.png" width="80" height="80" alt="Innovation"/>
+<h3>💡 INNOVATION</h3>
+<p align="left">
+<code>✓</code> AI First<br>
+<code>✓</code> Cloud Native<br>
+<code>✓</code> User Centric
+</p>
+</td>
+</tr>
+</table>
 
 </div>
 
 ---
 
-## 📊 GITHUB_STATS
+## 📊 GITHUB_ANALYTICS
 
 <div align="center">
 
-<img src="https://github-readme-stats-eight-theta.vercel.app/api?username=amithnaglapura&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&bg_color=0D1117&title_color=39FF14&icon_color=39FF14&text_color=FFFFFF&border_color=39FF14&hide_border=true" alt="GitHub Stats" width="49%" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=amithnaglapura&theme=tokyonight&background=0D1117&ring=39FF14&fire=39FF14&currStreakLabel=39FF14&hide_border=true" alt="GitHub Streak" width="49%" />
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=amithnaglapura&theme=dark&hide_border=true&background=0D1117&ring=39FF14&fire=39FF14&currStreakLabel=39FF14&date_format=M%20j%5B%2C%20Y%5D)
 
-<img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=amithnaglapura&layout=compact&langs_count=8&theme=tokyonight&bg_color=0D1117&title_color=39FF14&text_color=FFFFFF&border_color=39FF14&hide_border=true" alt="Top Languages" width="49%" />
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=amithnaglapura&bg_color=0D1117&color=39FF14&line=39FF14&point=FFFFFF&area=true&hide_border=true&custom_title=Contribution%20Graph" width="49%" />
+</div>
+
+<div align="center">
+
+![Contribution Graph](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=amithnaglapura&theme=monokai)
 
 </div>
 
 ---
 
-## 🚀 ACTIVE_PROJECTS
+## 🚀 ACTIVE_PROJECTS :: IN_DEVELOPMENT
 
-| PROJECT | DESCRIPTION | TECH | STATUS |
-|:---|:---|:---:|:---:|
-| **Project X** | HFT bot simulation with ML strategy optimization | Python, PyTorch, AWS | 🟡 |
-| **Project Y** | Scalable microservices for real-time financial data | Go, Docker, MongoDB | 🟢 |
-| **FinAI Suite** | Gen-AI powered financial analysis automation | LLMs, TypeScript, React | 🔵 |
+<div align="center">
+
+<table>
+<tr>
+<td width="33%" align="center">
+
+### 🤖 Project Quantum
+**HFT Trading Simulator**
+
+```diff
++ ML-based strategy optimization
++ Real-time market analysis
++ Backtesting engine
+```
+
+**Stack:**
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
+
+**Status:** 🟡 **In Progress** | 65% Complete
+
+</td>
+<td width="33%" align="center">
+
+### ⚙️ Project Atlas
+**FinTech Microservices**
+
+```diff
++ Scalable architecture
++ Real-time data processing
++ API Gateway integration
+```
+
+**Stack:**
+![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+
+**Status:** 🟢 **Active** | Production Ready
+
+</td>
+<td width="33%" align="center">
+
+### 🧠 FinAI Suite
+**AI Financial Analytics**
+
+```diff
++ Gen-AI powered insights
++ Automated reporting
++ Natural language queries
+```
+
+**Stack:**
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![OpenAI](https://img.shields.io/badge/-OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+
+**Status:** 🔵 **Planning** | Design Phase
+
+</td>
+</tr>
+</table>
+
+</div>
 
 ---
 
@@ -156,16 +325,25 @@ Publication: IJMR
 
 <div align="center">
 
+<br>
+
 ```ascii
 ╔════════════════════════════════════════════════════════════╗
+║                                                            ║
 ║  "The best way to predict the future is to build it."     ║
+║                                        — Alan Kay          ║
+║                                                            ║
 ╚════════════════════════════════════════════════════════════╝
 ```
 
-### 💚 Let's build something extraordinary together
+<br>
+
+### 💚 Thanks for visiting! Let's build something extraordinary together.
+
+<br>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
 
-**🔒 SECURE_CONNECTION :: STATUS_ACTIVE** | **⚡ SYSTEM_ONLINE**
+<sub>**🔒 SECURE CONNECTION :: ACTIVE** | **⚡ SYSTEM ONLINE** | **📍 2026**</sub>
 
 </div>
