@@ -215,26 +215,54 @@ Impact: Crop disease detection
 
 ## 💡 CORE_VALUES :: OPERATING_PRINCIPLES
 
-```mermaid
-mindmap
-  root((AMITH))
-    Pragmatism
-      Data-Driven Decisions
-      Real-World Solutions
-      Measurable Impact
-    Resilience
-      Continuous Learning
-      Adaptation
-      Problem Solving
-    Execution
-      Ship Fast
-      Iterate Often
-      Deliver Value
-    Innovation
-      AI First
-      Cloud Native
-      User Centric
+<div align="center">
+
+<table>
+<tr>
+<td width="25%" align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="80" height="80" />
+
+### 🎯 PRAGMATISM
+```diff
++ Data-Driven Decisions
++ Real-World Solutions
++ Measurable Impact
 ```
+</td>
+<td width="25%" align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" width="80" height="80" />
+
+### 💪 RESILIENCE
+```diff
++ Continuous Learning
++ Rapid Adaptation
++ Problem Solving
+```
+</td>
+<td width="25%" align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Rocket.png" width="80" height="80" />
+
+### ⚡ EXECUTION
+```diff
++ Ship Fast
++ Iterate Often
++ Deliver Value
+```
+</td>
+<td width="25%" align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Light%20Bulb.png" width="80" height="80" />
+
+### 🚀 INNOVATION
+```diff
++ AI First
++ Cloud Native
++ User Centric
+```
+</td>
+</tr>
+</table>
+
+</div>
 
 ---
 
@@ -343,9 +371,39 @@ const collaborate = {
 
 <div align="center">
 
-### 🏅 GITHUB_TROPHIES
+## 🏅 ACHIEVEMENTS :: MILESTONES_UNLOCKED
 
-<img src="https://github-profile-trophy.vercel.app/?username=amithnaglapura&theme=tokyonight&no-frame=false&no-bg=false&margin-w=4&row=1&column=7&bg_color=0D1117&title_color=39FF14&border_color=39FF14" alt="GitHub Trophies" width="98%"/>
+<table>
+<tr>
+<td align="center" width="20%">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Trophy.png" width="60" />
+<br><sub><b>AWS Hackathon</b></sub>
+<br><sub>🥉 Winner</sub>
+</td>
+<td align="center" width="20%">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Graduation%20Cap.png" width="60" />
+<br><sub><b>MSc AI in Business</b></sub>
+<br><sub>🎓 QUB</sub>
+</td>
+<td align="center" width="20%">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Scroll.png" width="60" />
+<br><sub><b>Research Published</b></sub>
+<br><sub>📄 IJMR</sub>
+</td>
+<td align="center" width="20%">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="60" />
+<br><sub><b>Finance Analyst</b></sub>
+<br><sub>📊 QSMF</sub>
+</td>
+<td align="center" width="20%">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="60" />
+<br><sub><b>Full-Stack Dev</b></sub>
+<br><sub>💻 Multi-Tech</sub>
+</td>
+</tr>
+</table>
+
+<img src="https://github-profile-trophy.vercel.app/?username=amithnaglapura&theme=algolia&no-frame=true&no-bg=false&margin-w=4&column=7" alt="Trophies" width="100%"/>
 
 </div>
 
@@ -353,13 +411,24 @@ const collaborate = {
 
 <div align="center">
 
-### 📈 CONTRIBUTION_SNAKE
+## 📈 ACTIVITY_MATRIX :: CONTRIBUTION_HEATMAP
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/amithnaglapura/amithnaglapura/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/amithnaglapura/amithnaglapura/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/amithnaglapura/amithnaglapura/output/github-contribution-grid-snake.svg">
-</picture>
+<img src="https://ghchart.rshah.org/39FF14/amithnaglapura" alt="Contribution Chart" width="100%"/>
+
+<br><br>
+
+<table>
+<tr>
+<td align="center">
+<img src="https://github-readme-stats.vercel.app/api/wakatime?username=amithnaglapura&theme=tokyonight&bg_color=0D1117&title_color=39FF14&text_color=FFFFFF&border_color=39FF14&layout=compact" alt="WakaTime Stats" />
+</td>
+</tr>
+</table>
+
+### 📊 LANGUAGE DISTRIBUTION
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=amithnaglapura&theme=tokyonight" alt="Repos Per Language" width="48%" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=amithnaglapura&theme=tokyonight" alt="Most Commit Language" width="48%" />
 
 </div>
 
