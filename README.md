@@ -1,44 +1,52 @@
-# <p align="center">✨ Amith Naglapura ✨</p>
+# <p align="center">⚡ AMITH NAGLAPURA ⚡</p>
 
 <p align="center">
-  <b>🚀 MSc AI in Business Student | Finance & Technical Analyst</b><br>
-  <i>Bridging the gap between Financial Analytics and Artificial Intelligence</i>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00D1FF&center=true&vCenter=true&width=600&lines=MSc+AI+in+Business;Finance+%26+Technical+Analyst;Bridging+Finance+%2B+Intelligence;Solving+Complex+Problems+with+Resilience" alt="Typing SVG" />
+</p>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/amithnaglaupra/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:amithnaglapura@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=codepen&logoColor=white" /></a>
 </p>
 
 ---
 
-## 🛠 Tech Stack & Tools
+## 🛰️ MISSION CONTROL
+> **"Pragmatism and resilience in solving complex technical problems."** > I specialize in translating high-level financial data into actionable AI strategies, leveraging a background in DCF modeling and Generative AI.
 
-### 💻 Data & Programming
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![SQL](https://img.shields.io/badge/sql-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+### 🛠 ARSENAL
 
-### 🚀 Development & Ops
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+| Category | technologies |
+| :--- | :--- |
+| **Data & AI** | `Python` `SQL` `Pandas` `PyTorch` `Tableau` |
+| **Engineering** | `Go` `TypeScript` `React` `MongoDB` |
+| **Cloud/DevOps** | `AWS` `Git` `Docker` `Linux` |
 
 ---
 
-## 🏆 Career Highlights
+## 🏆 STRATEGIC VICTORIES
 
-* [cite_start]**MSc AI in Business @ Queen's University Belfast:** Focused on the strategic application of AI in corporate environments.
-* [cite_start]**AWS PartyRock Gen-AI Hackathon (3rd Place):** Developed an AI-powered fraud analysis system using Generative AI to provide human-readable justifications for flagging high-risk accounts[cite: 47, 51].
-* [cite_start]**Finance Analyst @ QSMF:** Conducting detailed company valuations (DCF) and revenue forecasting using Bloomberg Terminal data to support investment recommendations[cite: 13, 16, 17].
-* [cite_start]**Published Researcher:** Developed a Machine Learning framework for early crop disease detection, published in the International Journal for Multidisciplinary Research[cite: 61, 62].
+* **🎓 MSc AI in Business @ QUB** | Architecting AI frameworks for the corporate sector.
+* **🥉 AWS Hackathon Winner** | Engineered a Gen-AI fraud detection engine providing human-readable risk justifications.
+* **📈 Finance Analyst @ QSMF** | Mastering DCF valuations and revenue forecasting via Bloomberg Terminal.
+* **🔬 Published Researcher** | Deployed ML models for crop disease detection (IJMR).
 
 ---
 
-## 📫 Let's Connect!
-<p align="left">
-<a href="https://www.linkedin.com/in/amithnaglaupra/" target="blank"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-<a href="mailto:amithnaglapura@gmail.com" target="blank"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+## 📊 PERFORMANCE METRICS
+
+<p align="center">
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=amithnaglapura&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=amithnaglapura&layout=compact&langs_count=7&theme=tokyonight" />
 </p>
 
 ---
-*“Pragmatism and resilience in solving complex technical problems.”*
+
+## 🛠 RECENT DEPLOYMENTS
+* **[Project X]** - High-frequency trading bot simulation.
+* **[Project Y]** - Scalable Go-based microservices for fintech.
+
+<p align="right">
+  <img src="https://raw.githubusercontent.com/mshibanami/action-get-workflow-runs/main/assets/images/octocat.gif" width="50" />
+</p>
