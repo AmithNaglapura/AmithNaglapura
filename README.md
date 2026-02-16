@@ -6,14 +6,23 @@
 
 </div>
 
+<div align="center">
+
 ```ascii
-┌─────────────────────────────────────────────────────────────┐
-│  ROOT@AMITH:~$ whoami                                       │
-│  > MSc AI in Business | Queen's University Belfast          │
-│  > Financial Analyst & AI Architect                         │
-│  > Pragmatism. Resilience. Execution.                       │
-└─────────────────────────────────────────────────────────────┘
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║   ROOT@AMITH:~$ whoami                                        ║
+║                                                               ║
+║   ┌─────────────────────────────────────────────────────┐    ║
+║   │  👨‍💻 MSc AI in Business | Queen's University Belfast  │    ║
+║   │  💼 Financial Analyst & AI Architect                 │    ║
+║   │  ⚡ Pragmatism. Resilience. Execution.               │    ║
+║   └─────────────────────────────────────────────────────┘    ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
 ```
+
+</div>
 
 <div align="center">
 
