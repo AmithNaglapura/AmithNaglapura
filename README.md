@@ -1,6 +1,6 @@
 <div align="center">
 
-# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Locked%20with%20Key.png" alt="Lock" width="30" height="30" /> ENCRYPTION BYPASS SUCCESSFUL <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Locked%20with%20Key.png" alt="Lock" width="30" height="30" />
+# 🔓 ENCRYPTION BYPASS SUCCESSFUL 🔓
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=AMITH%20NAGLAPURA&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Finance%20×%20Intelligence%20Engineer&descAlignY=51&descAlign=50" width="100%"/>
 
@@ -220,43 +220,39 @@ Impact: Crop disease detection
 <table>
 <tr>
 <td width="25%" align="center">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="80" height="80" />
 
-### 🎯 PRAGMATISM
-```diff
-+ Data-Driven Decisions
-+ Real-World Solutions
-+ Measurable Impact
+### 📊 PRAGMATISM
+```yaml
+✓ Data-Driven Decisions
+✓ Real-World Solutions
+✓ Measurable Impact
 ```
 </td>
 <td width="25%" align="center">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" width="80" height="80" />
 
-### 💪 RESILIENCE
-```diff
-+ Continuous Learning
-+ Rapid Adaptation
-+ Problem Solving
+### 🔥 RESILIENCE
+```yaml
+✓ Continuous Learning
+✓ Rapid Adaptation
+✓ Problem Solving
 ```
 </td>
 <td width="25%" align="center">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Rocket.png" width="80" height="80" />
 
 ### ⚡ EXECUTION
-```diff
-+ Ship Fast
-+ Iterate Often
-+ Deliver Value
+```yaml
+✓ Ship Fast
+✓ Iterate Often
+✓ Deliver Value
 ```
 </td>
 <td width="25%" align="center">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Light%20Bulb.png" width="80" height="80" />
 
-### 🚀 INNOVATION
-```diff
-+ AI First
-+ Cloud Native
-+ User Centric
+### 💡 INNOVATION
+```yaml
+✓ AI First
+✓ Cloud Native
+✓ User Centric
 ```
 </td>
 </tr>
@@ -376,34 +372,36 @@ const collaborate = {
 <table>
 <tr>
 <td align="center" width="20%">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Trophy.png" width="60" />
-<br><sub><b>AWS Hackathon</b></sub>
+<h3>🏆</h3>
+<sub><b>AWS Hackathon</b></sub>
 <br><sub>🥉 Winner</sub>
 </td>
 <td align="center" width="20%">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Graduation%20Cap.png" width="60" />
-<br><sub><b>MSc AI in Business</b></sub>
-<br><sub>🎓 QUB</sub>
+<h3>🎓</h3>
+<sub><b>MSc AI in Business</b></sub>
+<br><sub>Queen's University Belfast</sub>
 </td>
 <td align="center" width="20%">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Scroll.png" width="60" />
-<br><sub><b>Research Published</b></sub>
-<br><sub>📄 IJMR</sub>
+<h3>📄</h3>
+<sub><b>Research Published</b></sub>
+<br><sub>IJMR Journal</sub>
 </td>
 <td align="center" width="20%">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="60" />
-<br><sub><b>Finance Analyst</b></sub>
-<br><sub>📊 QSMF</sub>
+<h3>📊</h3>
+<sub><b>Finance Analyst</b></sub>
+<br><sub>QSMF</sub>
 </td>
 <td align="center" width="20%">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="60" />
-<br><sub><b>Full-Stack Dev</b></sub>
-<br><sub>💻 Multi-Tech</sub>
+<h3>💻</h3>
+<sub><b>Full-Stack Dev</b></sub>
+<br><sub>Multi-Stack</sub>
 </td>
 </tr>
 </table>
 
-<img src="https://github-profile-trophy.vercel.app/?username=amithnaglapura&theme=algolia&no-frame=true&no-bg=false&margin-w=4&column=7" alt="Trophies" width="100%"/>
+<br>
+
+<img src="https://github-profile-trophy.vercel.app/?username=amithnaglapura&theme=algolia&no-frame=true&no-bg=true&margin-w=4&column=7" alt="Trophies" width="100%"/>
 
 </div>
 
