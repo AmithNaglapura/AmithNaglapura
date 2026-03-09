@@ -1,521 +1,316 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amith Naglapura - Portfolio</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Poppins & Lato -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <!-- Custom Styles -->
-    <style>
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: #0d1117; /* Deep navy background */
-            color: #c9d1d9; /* Softer white text */
-            overflow-x: hidden;
-        }
-        #galaxy-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-            color: #f0f6fc; /* Brighter white for headings */
-        }
-        .glassmorphism {
-            background: rgba(13, 17, 23, 0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .highlight-text {
-            color: #f0f6fc;
-        }
-        /* New scroll-triggered slide-in animation */
-        .slide-in-section {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .slide-in-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .card-hover {
-            background-color: rgba(31, 41, 55, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-8px);
-            background-color: rgba(31, 41, 55, 0.4);
-            box-shadow: 0 0 20px rgba(200, 220, 255, 0.1);
-        }
-        .btn-primary {
-            background-color: #c9d1d9; /* Light grey button */
-            color: #0d1117; /* Dark text */
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            background-color: #f0f6fc; /* Brighter white on hover */
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(240, 246, 252, 0.3); /* White glow */
-        }
-        .btn-secondary {
-            background-color: transparent;
-            border: 1px solid #30363d;
-            color: #c9d1d9;
-            transition: all 0.3s ease;
-        }
-        .btn-secondary:hover {
-            background-color: #161b22;
-            border-color: #8b949e;
-        }
-        /* Spinner for loading state */
-        .spinner {
-            border: 4px solid rgba(255, 255, 255, 0.2);
-            border-left-color: #c9d1d9; /* Updated spinner color */
-            border-radius: 50%;
-            width: 36px;
-            height: 36px;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-    </style>
+    <title>Amith Naglapura - Tech Arsenal V2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FontLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/geometries/TextGeometry.js"></script>
 </head>
-<body class="antialiased">
-    <canvas id="galaxy-canvas"></canvas>
+<body class="loading">
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+    <canvas id="cursor-trail"></canvas>
 
-    <!-- Header & Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center glassmorphism rounded-full px-6 py-3 shadow-sm">
-                <a href="#" class="text-xl font-bold tracking-wider highlight-text">AN</a>
-                <nav class="hidden md:flex space-x-8 text-gray-400">
-                    <a href="#home" class="hover:text-cyan-400 transition-colors">Home</a>
-                    <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
-                    <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
-                    <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
-                    <a href="#ai-assistant" class="hover:text-cyan-400 transition-colors">AI Assistant</a>
-                    <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
-                </nav>
-                <a href="mailto:amithnaglapura@gmail.com" class="hidden md:block btn-primary font-medium py-2 px-4 rounded-full">
-                    Hire Me
-                </a>
-                <button id="mobile-menu-button" class="md:hidden text-2xl text-gray-300">
-                    ☰
-                </button>
+    <!-- Preloader Sequence -->
+    <div id="boot-screen">
+        <div class="boot-text" id="boot-text-container"></div>
+    </div>
+
+    <!-- Matrix Background -->
+    <canvas id="matrix-bg"></canvas>
+
+    <div class="main-wrapper">
+        <!-- Part 4: GitHub Live Stats Panel (Side Panel) -->
+        <aside class="github-panel">
+            <div class="panel-header">
+                <h3>GITHUB_FEED :: LIVE</h3>
+                <div class="pulse-dot-small"></div>
             </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden glassmorphism mx-4 rounded-lg shadow-lg">
-            <a href="#home" class="block text-center py-3 hover:bg-gray-800 rounded-t-lg">Home</a>
-            <a href="#about" class="block text-center py-3 hover:bg-gray-800">About</a>
-            <a href="#skills" class="block text-center py-3 hover:bg-gray-800">Skills</a>
-            <a href="#projects" class="block text-center py-3 hover:bg-gray-800">Projects</a>
-            <a href="#ai-assistant" class="block text-center py-3 hover:bg-gray-800">AI Assistant</a>
-            <a href="#contact" class="block text-center py-3 hover:bg-gray-800 rounded-b-lg">Contact</a>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 pt-24 relative z-10">
-
-        <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex items-center justify-center text-center">
-            <div class="max-w-4xl">
-                <span class="text-cyan-400 font-semibold">Hi, my name is</span>
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold my-4 highlight-text">Amith Naglapura</h1>
-                <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-500">I build data-driven solutions.</h2>
-                <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-400">
-                    As a passionate technologist, I specialize in data analysis and creating data-driven applications. My expertise lies in transforming complex data into actionable insights and engineering solutions that bridge the gap between hardware and software.
-                </p>
-                <div class="mt-8 flex flex-wrap justify-center gap-4">
-                    <a href="#projects" class="btn-primary font-bold py-3 px-6 rounded-full">
-                        View My Work
-                    </a>
-                    <a href="https://github.com/AmithNaglapura" target="_blank" class="btn-secondary font-bold py-3 px-6 rounded-full">
-                        GitHub Profile
-                    </a>
-                    <a href="https://public.tableau.com/app/profile/amith.naglapura/vizzes" target="_blank" class="btn-secondary font-bold py-3 px-6 rounded-full">
-                        Tableau Profile
-                    </a>
+            <div class="panel-profile">
+                <p>10 Repositories · 1 Star · Belfast, UK</p>
+                <div class="social-links-container">
+                    <a href="https://github.com/AmithNaglapura" target="_blank" class="cyber-link">[ GitHub ]</a>
+                    <a href="https://www.linkedin.com/in/amithnaglaupra/" target="_blank" class="cyber-link">[ LinkedIn ]</a>
+                    <a href="#" target="_blank" class="cyber-link highlight-link">[ Resume.pdf_⬇ ]</a>
                 </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-20 md:py-32 slide-in-section">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 highlight-text">
-                About Me
-            </h2>
-            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
-                <div class="md:w-1/2 lg:w-2/5">
-                     <img src="Amith.jpeg" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/600x600/0d1117/c9d1d9?text=Amith+Naglapura';"
-                         alt="A portrait of Amith Naglapura" 
-                         class="rounded-full shadow-2xl w-full h-auto object-cover aspect-square transform hover:scale-105 transition-transform duration-500 shadow-cyan-900/40">
-                </div>
-                <div class="md:w-1/2 lg:w-3/5">
-                    <p class="text-lg mb-4 text-gray-400">
-                        Hello! I'm Amith, a tech enthusiast from Mysore, India. My academic background provided a solid foundation in hardware systems, which sparked a deeper curiosity about the data these systems generate, leading me to the world of data analysis and machine learning.
-                    </p>
-                    <p class="text-lg text-gray-400">
-                        My goal is to apply my problem-solving skills to help businesses make smarter, data-informed decisions. Whether it's developing a machine learning model or analyzing electrical systems for a company like Schneider Electric, I am driven by the challenge of turning technical possibilities into real-world value.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-20 md:py-32 slide-in-section">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 highlight-text">
-                Professional Skillset
-            </h2>
-            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="rounded-lg p-6 card-hover">
-                    <h3 class="text-xl font-bold mb-4 highlight-text">Technical Skills</h3>
-                    <ul class="space-y-2 text-gray-400 grid grid-cols-2 gap-2">
-                        <li class="flex items-center"><i class="fas fa-chart-line text-cyan-400 mr-3"></i>Data Analysis</li>
-                        <li class="flex items-center"><i class="fas fa-brain text-cyan-400 mr-3"></i>Machine Learning</li>
-                        <li class="flex items-center"><i class="fas fa-chart-pie text-cyan-400 mr-3"></i>Tableau</li>
-                        <li class="flex items-center"><i class="fas fa-database text-cyan-400 mr-3"></i>SQL</li>
-                        <li class="flex items-center"><i class="fab fa-python text-cyan-400 mr-3"></i>Python</li>
-                        <li class="flex items-center"><i class="fas fa-microchip text-cyan-400 mr-3"></i>Embedded C, C++</li>
-                        <li class="flex items-center"><i class="fab fa-r-project text-cyan-400 mr-3"></i>R</li>
-                        <li class="flex items-center"><i class="fab fa-html5 text-cyan-400 mr-3"></i>HTML & CSS</li>
-                    </ul>
-                </div>
-                <div class="rounded-lg p-6 card-hover">
-                    <h3 class="text-xl font-bold mb-4 highlight-text">Professional Skills</h3>
-                    <ul class="space-y-2 text-gray-400 grid grid-cols-2 gap-2">
-                        <li class="flex items-center"><i class="fas fa-lightbulb text-cyan-400 mr-3"></i>Problem Solving</li>
-                        <li class="flex items-center"><i class="fas fa-tasks text-cyan-400 mr-3"></i>Project Management</li>
-                        <li class="flex items-center"><i class="fas fa-briefcase text-cyan-400 mr-3"></i>Business Analysis</li>
-                        <li class="flex items-center"><i class="fas fa-users text-cyan-400 mr-3"></i>Leadership</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 md:py-32 slide-in-section">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 highlight-text">
-                My Projects & Experience
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
-                <div class="rounded-lg p-6 flex flex-col card-hover">
-                    <div class="flex-grow">
-                        <h3 class="text-xl font-bold mb-2 highlight-text">Current Leakage Detection System</h3>
-                        <p class="text-sm text-gray-500 mb-2">Internship @ Schneider Electric</p>
-                        <p class="text-gray-400 mb-4">Developed algorithms to analyze real-time data from electrical circuits, enhancing detection accuracy to ensure electrical safety and prevent potential hazards.</p>
-                    </div>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="bg-gray-800 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">IoT</span>
-                        <span class="bg-gray-800 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Data Analysis</span>
-                        <span class="bg-gray-800 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
-                    </div>
-                </div>
-                <!-- Project Card 2 -->
-                <div class="rounded-lg p-6 flex flex-col card-hover">
-                    <div class="flex-grow">
-                        <h3 class="text-xl font-bold mb-2 highlight-text">Early Crop Disease Detection</h3>
-                        <p class="text-sm text-gray-500 mb-2">Published Research Paper (IJFMR)</p>
-                        <p class="text-gray-400 mb-4">Designed a machine learning framework to identify crop diseases at an early stage, minimizing crop damage and optimizing yield for better agricultural productivity.</p>
-                    </div>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="bg-gray-800 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Machine Learning</span>
-                        <span class="bg-gray-800 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Automation</span>
-                        <span class="bg-gray-800 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
-                    </div>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="rounded-lg p-6 flex flex-col card-hover">
-                    <div class="flex-grow">
-                        <h3 class="text-xl font-bold mb-2 highlight-text">Tableau Data Visualizations</h3>
-                        <p class="text-sm text-gray-500 mb-2">Public Portfolio</p>
-                        <p class="text-gray-400 mb-4">A collection of interactive dashboards and visualizations showcasing my ability to communicate complex data stories effectively. Click below to explore.</p>
-                    </div>
-                    <div class="mt-4">
-                        <a href="https://public.tableau.com/app/profile/amith.naglapura/vizzes" target="_blank" class="text-cyan-400 hover:text-cyan-300 font-semibold">View Profile &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI Assistant Section -->
-        <section id="ai-assistant" class="py-20 md:py-32 text-center slide-in-section">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 highlight-text">
-                ✨ AI Assistant
-            </h2>
-            <p class="max-w-2xl mx-auto text-lg mb-8 text-gray-400">
-                This is an experimental AI assistant trained on my professional profile. Ask it questions about my skills, projects, or experience.
-                <strong class="text-gray-300 block mt-2">Please note: The AI will only answer questions related to my profile.</strong>
-            </p>
-            <div class="max-w-2xl mx-auto">
-                <textarea id="question-input" rows="3" class="w-full p-4 rounded-lg bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-cyan-500 focus:outline-none text-white placeholder-gray-500" placeholder="e.g., 'What was Amith's role at Schneider Electric?' or 'Summarize his project on crop disease detection.'"></textarea>
-                <button id="ask-ai-btn" class="mt-4 btn-primary font-bold py-3 px-8 rounded-full">
-                    Ask AI Assistant
-                </button>
             </div>
             
-            <!-- AI Response Output -->
-            <div id="ai-response-output" class="mt-12 text-left max-w-3xl mx-auto hidden">
-                <div id="spinner-container" class="flex justify-center items-center h-40">
-                    <div class="spinner"></div>
-                </div>
-                <div id="response-content" class="hidden glassmorphism rounded-lg p-8">
-                    <!-- Content will be injected here by JavaScript -->
-                </div>
+            <div class="contribution-graph" id="heatmap">
+                <!-- SVG heatmap injected via JS -->
             </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 md:py-32 text-center slide-in-section">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 highlight-text">
-                Get In Touch
-            </h2>
-            <p class="max-w-xl mx-auto text-lg mb-8 text-gray-400">
-                I'm actively seeking roles where I can leverage my data analysis skills and am open to new opportunities and collaborations. If you're looking for a data-driven problem solver, I'd love to connect.
-            </p>
-            <a href="mailto:amithnaglapura@gmail.com?subject=Connecting from your Portfolio" class="btn-primary font-bold py-4 px-8 rounded-full">
-                Say Hello
-            </a>
-        </section>
+            <div class="repo-grid">
+                <div class="repo-card"><div class="lang-dot python"></div>Safe_Journey_NI</div>
+                <div class="repo-card"><div class="lang-dot python"></div>Boston-House...</div>
+                <div class="repo-card"><div class="lang-dot jupyter"></div>world-happiness...</div>
+                <div class="repo-card"><div class="lang-dot python"></div>cucumber-leaf...</div>
+                <div class="repo-card"><div class="lang-dot html"></div>Portfolio</div>
+                <div class="repo-card"><div class="lang-dot markdown"></div>AmithNaglapura</div>
+            </div>
+        </aside>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="py-8 text-center text-gray-500 relative z-10">
-        <div class="flex justify-center items-center space-x-6 mb-4">
-            <a href="https://www.linkedin.com/in/amithnaglaupra" target="_blank" class="text-2xl hover:text-cyan-400 transition-colors">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/AmithNaglapura" target="_blank" class="text-2xl hover:text-cyan-400 transition-colors">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://public.tableau.com/app/profile/amith.naglapura/vizzes" target="_blank" class="text-2xl hover:text-cyan-400 transition-colors">
-                <i class="fas fa-chart-bar"></i>
-            </a>
-        </div>
-        <p>Designed & Built by Amith Naglapura</p>
-        <p>&copy; 2025. All rights reserved.</p>
-    </footer>
-
-    <!-- JavaScript for interactivity -->
-    <script>
-        // --- Galaxy Animation ---
-        const canvas = document.getElementById('galaxy-canvas');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
-        const numParticles = 400;
-
-        function setCanvasSize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-
-        function createParticles() {
-            particles = [];
-            for (let i = 0; i < numParticles; i++) {
-                const distanceFromCenter = Math.random() * Math.random() * (Math.min(canvas.width, canvas.height) * 0.4);
-                const angle = Math.random() * 2 * Math.PI;
-                particles.push({
-                    x: canvas.width / 2 + distanceFromCenter * Math.cos(angle),
-                    y: canvas.height / 2 + distanceFromCenter * Math.sin(angle),
-                    radius: Math.random() * 1.2 + 0.1,
-                    angle: angle,
-                    speed: 0.005 + Math.random() * 0.005,
-                    distance: distanceFromCenter,
-                    color: `rgba(200, 220, 255, ${0.5 + Math.random() * 0.5})`
-                });
-            }
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => {
-                p.angle += p.speed;
-                p.x = canvas.width / 2 + p.distance * Math.cos(p.angle);
-                p.y = canvas.height / 2 + p.distance * Math.sin(p.angle);
-
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                ctx.fillStyle = p.color;
-                ctx.fill();
-            });
-            requestAnimationFrame(animate);
-        }
-
-        window.addEventListener('resize', () => {
-            setCanvasSize();
-            createParticles();
-        });
-
-        setCanvasSize();
-        createParticles();
-        animate();
-
-
-        // --- Mobile menu toggle ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-        for (let link of mobileMenuLinks) {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        }
-
-        // --- Navbar background on scroll ---
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-black/50');
-            } else {
-                navbar.classList.remove('bg-black/50');
-            }
-        });
-
-        // --- Scroll-triggered fade-in animation ---
-        const sections = document.querySelectorAll('.slide-in-section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-        // --- Gemini AI Assistant ---
-        const askBtn = document.getElementById('ask-ai-btn');
-        const questionInput = document.getElementById('question-input');
-        const aiResponseOutput = document.getElementById('ai-response-output');
-        const spinnerContainer = document.getElementById('spinner-container');
-        const responseContent = document.getElementById('response-content');
-
-        askBtn.addEventListener('click', askAiAssistant);
-
-        async function askAiAssistant() {
-            const userQuestion = questionInput.value;
-            if (!userQuestion.trim()) {
-                alert('Please ask a question first.');
-                return;
-            }
-
-            // Show loading spinner
-            aiResponseOutput.classList.remove('hidden');
-            spinnerContainer.classList.remove('hidden');
-            responseContent.classList.add('hidden');
-            askBtn.disabled = true;
-            askBtn.textContent = 'Thinking...';
-
-            const context = `
-                Amith Naglapura's Professional Profile:
-                - Summary: A technologist specializing in data analysis, transforming complex data into actionable insights and engineering solutions that bridge hardware and software.
-                - Experience:
-                  - Schneider Electric (Intern): Worked on a 'Detecting Current Leakage' system. Developed algorithms to analyze real-time electrical circuit data to enhance safety and detection accuracy.
-                  - Unified Mentor (Data Analysis Intern): Utilized Python, Excel, and SQL for data manipulation, visualization, and interpretation. Analyzed datasets to identify trends and present actionable insights.
-                - Key Projects:
-                  - Crack Detection In Pipeline: Used advanced sensors (EMAT/UT) and machine learning for accurate crack detection in pipelines.
-                  - Early Stage Crop Disease Detection: Published a research paper on this topic. The project involved using drones/satellite imagery and machine learning to detect crop diseases early.
-                - Skills:
-                  - Technical: Data Analysis, Machine Learning, Tableau, SQL, Python, Embedded C, C++, R, HTML, CSS.
-                  - Professional: Problem Solving, Project Management, Business Analysis, Leadership.
-            `;
-
-            const prompt = `You are a professional AI assistant for Amith Naglapura's portfolio. Your ONLY task is to answer questions based on the provided context about Amith. Do not answer any questions that are not related to this context. If a question is outside the context or is conversational (like 'hello' or 'how are you'), you must politely decline and state that you can only answer questions about Amith's professional profile.
-
-            Context about Amith:
-            ---
-            ${context}
-            ---
-
-            Question: "${userQuestion}"
-
-            Based only on the context provided, answer the question.`;
+        <!-- Main Content Area -->
+        <main class="arsenal-container">
             
-            const payload = {
-              contents: [{ role: "user", parts: [{ text: prompt }] }]
-            };
+            <!-- Part 1: Interactive 3D Avatar Hero Section -->
+            <section class="hero-section" id="hero-3d">
+                <div id="three-container">
+                    <!-- Three.js Canvas injected here -->
+                    <div id="orb-tooltip" class="tooltip hidden"></div>
+                </div>
+                <!-- Mobile Fallback -->
+                <div id="mobile-hero" class="hidden">
+                    <img src="avatar_default.png" alt="Amith Naglapura" class="fallback-avatar">
+                </div>
 
-            const apiKey = "AIzaSyDvAbKIbLJWU2GEKIHAdfttAAATuVp22sw"; // API key will be provided by the environment
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                <div class="hero-text">
+                    <h1 class="glitch-name">AMITH NAGLAPURA</h1>
+                    <p class="role-subtitle">MSc AI in Business | Finance Analyst | AI & Data Engineer</p>
+                    <div class="avatar-controls">
+                        <button id="btn-default" class="active">Default</button>
+                        <button id="btn-thinking">Thinking</button>
+                        <button id="btn-presenting">Presenting</button>
+                    </div>
+                </div>
+            </section>
 
-            try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
+            <!-- Part 2: Animated Skills Arsenal -->
+            <header class="section-header">
+                <div class="header-flex">
+                    <h1 id="typewriter-title" class="glitch-title"></h1>
+                    <div class="uptime-counter">UPTIME: <span id="uptime">847 days 14:32:07</span></div>
+                </div>
+                <div class="underline-grow"></div>
+            </header>
 
-                if (!response.ok) {
-                    throw new Error(`API error: ${response.statusText}`);
-                }
+            <section class="category-section" id="ai-ml">
+                <h2 class="category-title">01 :: AI/ML & Data Science</h2>
+                <div class="skills-grid svg-rings-grid">
+                    <!-- Progress Rings injected via JS -->
+                </div>
+            </section>
 
-                const result = await response.json();
+            <section class="category-section" id="cloud-devops">
+                <h2 class="category-title">02 :: Cloud & DevOps</h2>
+                <div class="skills-grid iso-cubes-grid">
+                    <!-- Isometric Cubes injected via JS -->
+                </div>
+            </section>
 
-                if (result.candidates && result.candidates.length > 0 &&
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-                    result.candidates[0].content.parts.length > 0) {
-                    
-                    const text = result.candidates[0].content.parts[0].text;
-                    displayResponse(text);
+            <section class="category-section" id="engineering">
+                <h2 class="category-title">03 :: Languages & Systems</h2>
+                <div class="terminal-window crt">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <div class="btn close"></div>
+                            <div class="btn minimize"></div>
+                            <div class="btn expand"></div>
+                        </div>
+                        <div class="terminal-title">bash - amithnp@systems:~</div>
+                    </div>
+                    <div class="terminal-body" id="terminal-cli-output">
+                        <!-- CLI typing effect injected here -->
+                    </div>
+                </div>
+            </section>
 
-                } else {
-                    displayError('The AI could not generate a response. Please try a different question.');
-                }
+            <section class="category-section finance-bg" id="finance">
+                <h2 class="category-title">04 :: Finance & Analytics</h2>
+                <div class="ticker-tape">
+                    <div class="ticker-scroll">AAPL +2.3% &nbsp;&nbsp; MSFT +1.8% &nbsp;&nbsp; GOOGL -0.5% &nbsp;&nbsp; TSLA +4.2% &nbsp;&nbsp; AMZN +1.1% &nbsp;&nbsp; META +0.9% &nbsp;&nbsp; NVDA +5.6% &nbsp;&nbsp; AAPL +2.3% &nbsp;&nbsp; MSFT +1.8%</div>
+                </div>
+                <div class="candlestick-chart">
+                    <!-- Candlestick bars injected via JS -->
+                    <div class="chart-axis-y">PROFICIENCY</div>
+                    <div class="chart-axis-x">SKILL</div>
+                </div>
+            </section>
 
-            } catch (error) {
-                console.error('Error calling Gemini API:', error);
-                displayError('An error occurred while generating the response. Please check the console for details.');
-            } finally {
-                // Hide spinner and restore button
-                spinnerContainer.classList.add('hidden');
-                askBtn.disabled = false;
-                askBtn.textContent = 'Ask AI Assistant';
-            }
-        }
+            <!-- Part 3: Achievement Cards -->
+            <section class="category-section" id="achievements">
+                <header class="section-header">
+                    <h1 class="glitch-title">MISSIONS_COMPLETED :: 4</h1>
+                    <div class="underline-grow"></div>
+                </header>
+                
+                <div class="achievements-grid">
+                    <!-- Card 1 -->
+                    <div class="achievement-card glassmorphism tilt-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+                        </div>
+                        <h3 class="card-title">GEN-AI FRAUD DETECTION</h3>
+                        <p class="card-body">AWS PartyRock Hackathon · 3rd Place National</p>
+                        <div class="card-tags">
+                            <span>AWS</span><span>LLMs</span><span>Python</span><span>Lambda</span>
+                        </div>
+                        <div class="card-bottom unlocked-badge">
+                            ACHIEVEMENT UNLOCKED
+                        </div>
+                    </div>
 
-        function displayResponse(text) {
-            responseContent.innerHTML = `<p class="text-gray-300">${text}</p>`;
-            responseContent.classList.remove('hidden');
-        }
+                    <!-- Card 2 -->
+                    <div class="achievement-card glassmorphism tilt-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                        </div>
+                        <h3 class="card-title">QSMF INVESTMENT ANALYST</h3>
+                        <p class="card-body">DCF Modeling · Bloomberg BQL · Portfolio Valuation</p>
+                        <div class="card-tags">
+                            <span>Bloomberg</span><span>Excel VBA</span><span>Equity Research</span>
+                        </div>
+                        <div class="card-bottom counter-badge">
+                            Reports Written: <span class="report-count" data-target="12">0</span>+
+                        </div>
+                    </div>
 
-        function displayError(message) {
-            responseContent.innerHTML = `<p class="text-red-400 text-center">${message}</p>`;
-            responseContent.classList.remove('hidden');
-        }
+                    <!-- Card 3 -->
+                    <div class="achievement-card glassmorphism tilt-card" onclick="window.open('https://scholar.google.com', '_blank')">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8"></path><path d="M3 22h18"></path><path d="M14 22a7 7 0 1 0 0-14h-1"></path><path d="M9 14h2"></path><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"></path><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"></path></svg>
+                        </div>
+                        <h3 class="card-title">PUBLISHED: IJFMR 2024</h3>
+                        <p class="card-body">ML Framework for Early Crop Disease Detection</p>
+                        <div class="card-tags">
+                            <span>Computer Vision</span><span>Python</span><span>Deep Learning</span>
+                        </div>
+                        <div class="card-bottom link-badge">
+                            Citations: Available on Google Scholar ↗
+                        </div>
+                    </div>
 
-    </script>
+                    <!-- Card 4 -->
+                    <div class="achievement-card glassmorphism tilt-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                        </div>
+                        <h3 class="card-title">QUEEN'S UNIVERSITY BELFAST</h3>
+                        <p class="card-body">MSc Artificial Intelligence in Business · 2025-2026</p>
+                        <div class="card-tags">
+                            <span>AI Strategy</span><span>NLP</span><span>Business Intelligence</span>
+                        </div>
+                        <div class="card-bottom progress-badge">
+                            DEGREE PROGRESS: <span class="degree-bar">[████████░░]</span> 70%
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Part 5: Certifications -->
+            <section class="category-section" id="certifications">
+                <header class="section-header">
+                    <h1 class="glitch-title">LICENSES_&_CERTIFICATIONS :: 6</h1>
+                    <div class="underline-grow"></div>
+                </header>
+                
+                <div class="achievements-grid">
+                    <!-- IBM -->
+                    <div class="achievement-card glassmorphism tilt-card" onclick="window.open('https://www.coursera.org/account/accomplishments/professional-cert/certificate/K9XBWAK609WC', '_blank')">
+                        <div class="card-icon" style="font-weight: 900; font-size: 1.8rem; letter-spacing: -2px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">IBM</div>
+                        <h3 class="card-title">IBM Machine Learning</h3>
+                        <p class="card-body">IBM · Credential ID K9XBWAK609WC</p>
+                        <div class="card-tags">
+                            <span>CNNs</span><span>Data Analysis</span><span>+9 skills</span>
+                        </div>
+                    </div>
+
+                    <!-- AWS -->
+                    <div class="achievement-card glassmorphism tilt-card" onclick="window.open('https://www.credly.com/badges/8679cb9d-bad3-4364-b331-adf3fefb26a4/linked_in_profile', '_blank')">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 304 182" width="60" height="36" fill="currentColor">
+                                <path d="M86.4,66.4c0,3.7,0.4,6.7,1.1,8.9c0.8,2.2,1.8,4.6,3.2,7.2c0.5,0.8,0.7,1.6,0.7,2.3c0,1-0.6,2-1.9,3l-6.3,4.2
+                                c-0.9,0.6-1.8,0.9-2.6,0.9c-1,0-2-0.5-3-1.4C76.2,90,75,88.4,74,86.8c-1-1.7-2-3.6-3.1-5.9c-7.8,9.2-17.6,13.8-29.4,13.8
+                                c-8.4,0-15.1-2.4-20-7.2c-4.9-4.8-7.4-11.2-7.4-19.2c0-8.5,3-15.4,9.1-20.6c6.1-5.2,14.2-7.8,24.5-7.8c3.4,0,6.9,0.3,10.6,0.8
+                                c3.7,0.5,7.5,1.3,11.5,2.2v-7.3c0-7.6-1.6-12.9-4.7-16c-3.2-3.1-8.6-4.6-16.3-4.6c-3.5,0-7.1,0.4-10.8,1.3c-3.7,0.9-7.3,2-10.8,3.4
+                                c-1.6,0.7-2.8,1.1-3.5,1.3c-0.7,0.2-1.2,0.3-1.6,0.3c-1.4,0-2.1-1-2.1-3.1v-4.9c0-1.6,0.2-2.8,0.7-3.5c0.5-0.7,1.4-1.4,2.8-2.1
+                                c3.5-1.8,7.7-3.3,12.6-4.5c4.9-1.3,10.1-1.9,15.6-1.9c11.9,0,20.6,2.7,26.2,8.1c5.5,5.4,8.3,13.6,8.3,24.6V66.4z M45.8,81.6
+                                c3.3,0,6.7-0.6,10.3-1.8c3.6-1.2,6.8-3.4,9.5-6.4c1.6-1.9,2.8-4,3.4-6.4c0.6-2.4,1-5.3,1-8.7v-4.2c-2.9-0.7-6-1.3-9.2-1.7
+                                c-3.2-0.4-6.3-0.6-9.4-0.6c-6.7,0-11.6,1.3-14.9,4c-3.3,2.7-4.9,6.5-4.9,11.5c0,4.7,1.2,8.2,3.7,10.6
+                                C37.7,80.4,41.2,81.6,45.8,81.6z M126.1,92.4c-1.8,0-3-0.3-3.8-1c-0.8-0.6-1.5-2-2.1-3.9L96.7,10.2c-0.6-2-0.9-3.3-0.9-4
+                                c0-1.6,0.8-2.5,2.4-2.5h9.8c1.9,0,3.2,0.3,3.9,1c0.8,0.6,1.4,2,2,3.9l16.8,66.2l15.6-66.2c0.5-2,1.1-3.3,1.9-3.9c0.8-0.6,2.2-1,4-1
+                                h8c1.9,0,3.2,0.3,4,1c0.8,0.6,1.5,2,1.9,3.9l15.8,67l17.3-67c0.6-2,1.3-3.3,2-3.9c0.8-0.6,2.1-1,3.9-1h9.3c1.6,0,2.5,0.8,2.5,2.5
+                                c0,0.5-0.1,1-0.2,1.6c-0.1,0.6-0.3,1.4-0.7,2.5l-24.1,77.3c-0.6,2-1.3,3.3-2.1,3.9c-0.8,0.6-2.1,1-3.8,1h-8.6c-1.9,0-3.2-0.3-4-1
+                                c-0.8-0.7-1.5-2-1.9-4L156,23l-15.4,64.4c-0.5-2-1.1,3.3-1.9,4c-0.8,0.7-2.2,1-4,1H126.1z M254.6,95.1c-5.2,0-10.4-0.6-15.4-1.8
+                                c-5-1.2-8.9-2.5-11.5-4c-1.6-0.9-2.7-1.9-3.1-2.8c-0.4-0.9-0.6-1.9-0.6-2.8v-5.1c0-2.1,0.8-3.1,2.3-3.1c0.6,0,1.2,0.1,1.8,0.3
+                                c0.6,0.2,1.5,0.6,2.5,1c3.4,1.5,7.1,2.7,11,3.5c4,0.8,7.9,1.2,11.9,1.2c6.3,0,11.2-1.1,14.6-3.3c3.4-2.2,5.2-5.4,5.2-9.5
+                                c0-2.8-0.9-5.1-2.7-7c-1.8-1.9-5.2-3.6-10.1-5.2L246,52c-7.3-2.3-12.7-5.7-16-10.2c-3.3-4.4-5-9.3-5-14.5c0-4.2,0.9-7.9,2.7-11.1
+                                c1.8-3.2,4.2-6,7.2-8.2c3-2.3,6.4-4,10.4-5.2c4-1.2,8.2-1.7,12.6-1.7c2.2,0,4.5,0.1,6.7,0.4c2.3,0.3,4.4,0.7,6.5,1.1
+                                c2,0.5,3.9,1,5.7,1.6c1.8,0.6,3.2,1.2,4.2,1.8c1.4,0.8,2.4,1.6,3,2.5c0.6,0.8,0.9,1.9,0.9,3.3v4.7c0,2.1-0.8,3.2-2.3,3.2
+                                c-0.8,0-2.1-0.4-3.8-1.2c-5.7-2.6-12.1-3.9-19.2-3.9c-5.7,0-10.2,0.9-13.3,2.8c-3.1,1.9-4.7,4.8-4.7,8.9c0,2.8,1,5.2,3,7.1
+                                c2,1.9,5.7,3.8,11,5.5l14.2,4.5c7.2,2.3,12.4,5.5,15.5,9.6c3.1,4.1,4.6,8.8,4.6,14c0,4.3-0.9,8.2-2.6,11.6
+                                c-1.8,3.4-4.2,6.4-7.3,8.8c-3.1,2.5-6.8,4.3-11.1,5.6C264.4,94.4,259.7,95.1,254.6,95.1z"/>
+                                <path d="M273.5,143.7c-32.9,24.3-80.7,37.2-121.8,37.2c-57.6,0-109.5-21.3-148.7-56.7c-3.1-2.8-0.3-6.6,3.4-4.4
+                                c42.4,24.6,94.7,39.5,148.8,39.5c36.5,0,76.6-7.6,113.5-23.2C274.2,133.6,278.9,139.7,273.5,143.7z"/>
+                                <path d="M287.2,128.1c-4.2-5.4-27.8-2.6-38.5-1.3c-3.2,0.4-3.7-2.4-0.8-4.5c18.8-13.2,49.7-9.4,53.3-5
+                                c3.6,4.5-1,35.4-18.6,50.2c-2.7,2.3-5.3,1.1-4.1-1.9C282.5,155.7,291.4,133.4,287.2,128.1z"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">AWS Academy Cloud Foundations</h3>
+                        <p class="card-body">Amazon Web Services (AWS) · Feb 2026</p>
+                        <div class="card-tags">
+                            <span>AWS Architecture</span><span>Cloud Computing</span>
+                        </div>
+                    </div>
+
+                    <!-- Bloomberg 1 -->
+                    <div class="achievement-card glassmorphism tilt-card" onclick="window.open('https://portal.bloombergforeducation.com/certificates/kigtQPVKEwiKSPdMD3se6Z2H', '_blank')">
+                        <div class="card-icon" style="font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; font-family: sans-serif;">Bloomberg</div>
+                        <h3 class="card-title">Bloomberg Spreadsheet Analysis</h3>
+                        <p class="card-body">Bloomberg · Dec 2025</p>
+                        <div class="card-tags">
+                            <span>BQL</span><span>Financial Modeling</span>
+                        </div>
+                    </div>
+
+                    <!-- Bloomberg 2 -->
+                    <div class="achievement-card glassmorphism tilt-card" onclick="window.open('https://portal.bloombergforeducation.com/certificates/wyZbRgmECTeCN3SykBCYwoXh', '_blank')">
+                        <div class="card-icon" style="font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; font-family: sans-serif;">Bloomberg</div>
+                        <h3 class="card-title">Bloomberg Market Concepts</h3>
+                        <p class="card-body">Bloomberg · Nov 2025</p>
+                        <div class="card-tags">
+                            <span>Stock Market Analysis</span><span>Terminal</span>
+                        </div>
+                    </div>
+
+                    <!-- Oracle 1 -->
+                    <div class="achievement-card glassmorphism tilt-card" onclick="window.open('https://catalog-education.oracle.com/ords/certview/sharebadge?id=B535BD4296838BBD92EC08632A3BFA10F470B84E4F8D0022738A95CFA5CCED7E', '_blank')">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 231 30" width="80" height="15" fill="currentColor">
+                                <path d="M99.61,19.52h15.24l-8.05-13L92,30H85.27l18-28.17a4.29,4.29,0,0,1,7-.05L128.32,30h-6.73l-3.17-5.25H103l-3.36-5.23m69.93,5.23V0.28h-5.72V27.16a2.76,2.76,0,0,0,.85,2,2.89,2.89,0,0,0,2.08.87h26l3.39-5.25H169.54M75,20.38A10,10,0,0,0,75,.28H50V30h5.71V5.54H74.65a4.81,4.81,0,0,1,0,9.62H58.54L75.6,30h8.29L72.43,20.38H75M14.88,30H32.15a14.86,14.86,0,0,0,0-29.71H14.88a14.86,14.86,0,1,0,0,29.71m16.88-5.23H15.26a9.62,9.62,0,0,1,0-19.23h16.5a9.62,9.62,0,1,1,0,19.23M140.25,30h17.63l3.34-5.23H140.64a9.62,9.62,0,1,1,0-19.23h16.75l3.38-5.25H140.25a14.86,14.86,0,1,0,0,29.71m69.87-5.23a9.62,9.62,0,0,1-9.26-7h24.42l3.36-5.24H200.86a9.61,9.61,0,0,1,9.26-7h16.76l3.35-5.25h-20.5a14.86,14.86,0,0,0,0,29.71h17.63l3.35-5.23h-20.6"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Oracle Data Science Professional</h3>
+                        <p class="card-body">Oracle · Aug 2025</p>
+                        <div class="card-tags">
+                            <span>Data Science</span><span>Machine Learning</span>
+                        </div>
+                    </div>
+
+                    <!-- Oracle 2 -->
+                    <div class="achievement-card glassmorphism tilt-card" onclick="window.open('https://catalog-education.oracle.com/ords/certview/sharebadge?id=CE8517381AC5A3A738563AF8E8998E962E5A266C19196DE8D5392E9307C55C2A', '_blank')">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 231 30" width="80" height="15" fill="currentColor">
+                                <path d="M99.61,19.52h15.24l-8.05-13L92,30H85.27l18-28.17a4.29,4.29,0,0,1,7-.05L128.32,30h-6.73l-3.17-5.25H103l-3.36-5.23m69.93,5.23V0.28h-5.72V27.16a2.76,2.76,0,0,0,.85,2,2.89,2.89,0,0,0,2.08.87h26l3.39-5.25H169.54M75,20.38A10,10,0,0,0,75,.28H50V30h5.71V5.54H74.65a4.81,4.81,0,0,1,0,9.62H58.54L75.6,30h8.29L72.43,20.38H75M14.88,30H32.15a14.86,14.86,0,0,0,0-29.71H14.88a14.86,14.86,0,1,0,0,29.71m16.88-5.23H15.26a9.62,9.62,0,0,1,0-19.23h16.5a9.62,9.62,0,1,1,0,19.23M140.25,30h17.63l3.34-5.23H140.64a9.62,9.62,0,1,1,0-19.23h16.75l3.38-5.25H140.25a14.86,14.86,0,1,0,0,29.71m69.87-5.23a9.62,9.62,0,0,1-9.26-7h24.42l3.36-5.24H200.86a9.61,9.61,0,0,1,9.26-7h16.76l3.35-5.25h-20.5a14.86,14.86,0,0,0,0,29.71h17.63l3.35-5.23h-20.6"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">MySQL HeatWave Implementation</h3>
+                        <p class="card-body">Oracle Certified Associate · Aug 2025</p>
+                        <div class="card-tags">
+                            <span>MySQL</span><span>HeatWave</span><span>Databases</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
