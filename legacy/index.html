@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amith Naglapura - Tech Arsenal V2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FontLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/geometries/TextGeometry.js"></script>
+</head>
+<body class="loading">
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+    <canvas id="cursor-trail"></canvas>
+
+    <!-- Preloader Sequence -->
+    <div id="boot-screen">
+        <div class="boot-text" id="boot-text-container"></div>
+    </div>
+
+    <!-- Matrix Background -->
+    <canvas id="matrix-bg"></canvas>
+
+    <div class="main-wrapper">
+        <!-- Part 4: GitHub Live Stats Panel (Side Panel) -->
+        <aside class="github-panel">
+            <div class="panel-header">
+                <h3>GITHUB_FEED :: LIVE</h3>
+                <div class="pulse-dot-small"></div>
+            </div>
+            <div class="panel-profile">
+                <p>10 Repositories · 1 Star · Belfast, UK</p>
+                <div class="social-links-container">
+                    <a href="https://github.com/AmithNaglapura" target="_blank" class="cyber-link">[ GitHub ]</a>
+                    <a href="https://www.linkedin.com/in/amithnaglaupra/" target="_blank" class="cyber-link">[ LinkedIn ]</a>
+                    <a href="#" target="_blank" class="cyber-link highlight-link">[ Resume.pdf_⬇ ]</a>
+                </div>
+            </div>
+            
+            <div class="contribution-graph" id="heatmap">
+                <!-- SVG heatmap injected via JS -->
+            </div>
+
+            <div class="repo-grid">
+                <div class="repo-card"><div class="lang-dot python"></div>Safe_Journey_NI</div>
+                <div class="repo-card"><div class="lang-dot python"></div>Boston-House...</div>
+                <div class="repo-card"><div class="lang-dot jupyter"></div>world-happiness...</div>
+                <div class="repo-card"><div class="lang-dot python"></div>cucumber-leaf...</div>
+                <div class="repo-card"><div class="lang-dot html"></div>Portfolio</div>
+                <div class="repo-card"><div class="lang-dot markdown"></div>AmithNaglapura</div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="arsenal-container">
+            
+            <!-- Part 1: Interactive 3D Avatar Hero Section -->
+            <section class="hero-section" id="hero-3d">
+                <div id="three-container">
+                    <!-- Three.js Canvas injected here -->
+                    <div id="orb-tooltip" class="tooltip hidden"></div>
+                </div>
+                <!-- Mobile Fallback -->
+                <div id="mobile-hero" class="hidden">
+                    <img src="avatar_default.png" alt="Amith Naglapura" class="fallback-avatar">
+                </div>
+
+                <div class="hero-text">
+                    <h1 class="glitch-name">AMITH NAGLAPURA</h1>
+                    <p class="role-subtitle">MSc AI in Business | Finance Analyst | AI & Data Engineer</p>
+                    <div class="avatar-controls">
+                        <button id="btn-default" class="active">Default</button>
+                        <button id="btn-thinking">Thinking</button>
+                        <button id="btn-presenting">Presenting</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Part 2: Animated Skills Arsenal -->
+            <header class="section-header">
+                <div class="header-flex">
+                    <h1 id="typewriter-title" class="glitch-title"></h1>
+                    <div class="uptime-counter">UPTIME: <span id="uptime">847 days 14:32:07</span></div>
+                </div>
+                <div class="underline-grow"></div>
+            </header>
+
+            <section class="category-section" id="ai-ml">
+                <h2 class="category-title">01 :: AI/ML & Data Science</h2>
+                <div class="skills-grid svg-rings-grid">
+                    <!-- Progress Rings injected via JS -->
+                </div>
+            </section>
+
+            <section class="category-section" id="cloud-devops">
+                <h2 class="category-title">02 :: Cloud & DevOps</h2>
+                <div class="skills-grid iso-cubes-grid">
+                    <!-- Isometric Cubes injected via JS -->
+                </div>
+            </section>
+
+            <section class="category-section" id="engineering">
+                <h2 class="category-title">03 :: Languages & Systems</h2>
+                <div class="terminal-window crt">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <div class="btn close"></div>
+                            <div class="btn minimize"></div>
+                            <div class="btn expand"></div>
+                        </div>
+                        <div class="terminal-title">bash - amithnp@systems:~</div>
+                    </div>
+                    <div class="terminal-body" id="terminal-cli-output">
+                        <!-- CLI typing effect injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="category-section finance-bg" id="finance">
+                <h2 class="category-title">04 :: Finance & Analytics</h2>
+                <div class="ticker-tape">
+                    <div class="ticker-scroll">AAPL +2.3% &nbsp;&nbsp; MSFT +1.8% &nbsp;&nbsp; GOOGL -0.5% &nbsp;&nbsp; TSLA +4.2% &nbsp;&nbsp; AMZN +1.1% &nbsp;&nbsp; META +0.9% &nbsp;&nbsp; NVDA +5.6% &nbsp;&nbsp; AAPL +2.3% &nbsp;&nbsp; MSFT +1.8%</div>
+                </div>
+                <div class="candlestick-chart">
+                    <!-- Candlestick bars injected via JS -->
+                    <div class="chart-axis-y">PROFICIENCY</div>
+                    <div class="chart-axis-x">SKILL</div>
+                </div>
+            </section>
+
+            <!-- Part 3: Achievement Cards -->
+            <section class="category-section" id="achievements">
+                <header class="section-header">
+                    <h1 class="glitch-title">MISSIONS_COMPLETED :: 4</h1>
+                    <div class="underline-grow"></div>
+                </header>
+                
+                <div class="achievements-grid">
+                    <!-- Card 1 -->
+                    <div class="achievement-card glassmorphism tilt-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+                        </div>
+                        <h3 class="card-title">GEN-AI FRAUD DETECTION</h3>
+                        <p class="card-body">AWS PartyRock Hackathon · 3rd Place National</p>
+                        <div class="card-tags">
+                            <span>AWS</span><span>LLMs</span><span>Python</span><span>Lambda</span>
+                        </div>
+                        <div class="card-bottom unlocked-badge">
+                            ACHIEVEMENT UNLOCKED
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="achievement-card glassmorphism tilt-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                        </div>
+                        <h3 class="card-title">QSMF INVESTMENT ANALYST</h3>
+                        <p class="card-body">DCF Modeling · Bloomberg BQL · Portfolio Valuation</p>
+                        <div class="card-tags">
+                            <span>Bloomberg</span><span>Excel VBA</span><span>Equity Research</span>
+                        </div>
+                        <div class="card-bottom counter-badge">
+                            Reports Written: <span class="report-count" data-target="12">0</span>+
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="achievement-card glassmorphism tilt-card" onclick="window.open('https://scholar.google.com', '_blank')">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8"></path><path d="M3 22h18"></path><path d="M14 22a7 7 0 1 0 0-14h-1"></path><path d="M9 14h2"></path><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"></path><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"></path></svg>
+                        </div>
+                        <h3 class="card-title">PUBLISHED: IJFMR 2024</h3>
+                        <p class="card-body">ML Framework for Early Crop Disease Detection</p>
+                        <div class="card-tags">
+                            <span>Computer Vision</span><span>Python</span><span>Deep Learning</span>
+                        </div>
+                        <div class="card-bottom link-badge">
+                            Citations: Available on Google Scholar ↗
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="achievement-card glassmorphism tilt-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                        </div>
+                        <h3 class="card-title">QUEEN'S UNIVERSITY BELFAST</h3>
+                        <p class="card-body">MSc Artificial Intelligence in Business · 2025-2026</p>
+                        <div class="card-tags">
+                            <span>AI Strategy</span><span>NLP</span><span>Business Intelligence</span>
+                        </div>
+                        <div class="card-bottom progress-badge">
+                            DEGREE PROGRESS: <span class="degree-bar">[████████░░]</span> 70%
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Part 5: Certifications -->
+            <section class="category-section" id="certifications">
+                <header class="section-header">
+                    <h1 class="glitch-title">LICENSES_&_CERTIFICATIONS :: 6</h1>
+                    <div class="underline-grow"></div>
+                </header>
+                
+                <div class="achievements-grid">
+                    <!-- IBM -->
+                    <div class="achievement-card glassmorphism tilt-card" onclick="window.open('https://www.coursera.org/account/accomplishments/professional-cert/certificate/K9XBWAK609WC', '_blank')">
+                        <div class="card-icon" style="font-weight: 900; font-size: 1.8rem; letter-spacing: -2px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">IBM</div>
+                        <h3 class="card-title">IBM Machine Learning</h3>
+                        <p class="card-body">IBM · Credential ID K9XBWAK609WC</p>
+                        <div class="card-tags">
+                            <span>CNNs</span><span>Data Analysis</span><span>+9 skills</span>
+                        </div>
+                    </div>
+
+                    <!-- AWS -->
+                    <div class="achievement-card glassmorphism tilt-card" onclick="window.open('https://www.credly.com/badges/8679cb9d-bad3-4364-b331-adf3fefb26a4/linked_in_profile', '_blank')">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 304 182" width="60" height="36" fill="currentColor">
+                                <path d="M86.4,66.4c0,3.7,0.4,6.7,1.1,8.9c0.8,2.2,1.8,4.6,3.2,7.2c0.5,0.8,0.7,1.6,0.7,2.3c0,1-0.6,2-1.9,3l-6.3,4.2
+                                c-0.9,0.6-1.8,0.9-2.6,0.9c-1,0-2-0.5-3-1.4C76.2,90,75,88.4,74,86.8c-1-1.7-2-3.6-3.1-5.9c-7.8,9.2-17.6,13.8-29.4,13.8
+                                c-8.4,0-15.1-2.4-20-7.2c-4.9-4.8-7.4-11.2-7.4-19.2c0-8.5,3-15.4,9.1-20.6c6.1-5.2,14.2-7.8,24.5-7.8c3.4,0,6.9,0.3,10.6,0.8
+                                c3.7,0.5,7.5,1.3,11.5,2.2v-7.3c0-7.6-1.6-12.9-4.7-16c-3.2-3.1-8.6-4.6-16.3-4.6c-3.5,0-7.1,0.4-10.8,1.3c-3.7,0.9-7.3,2-10.8,3.4
+                                c-1.6,0.7-2.8,1.1-3.5,1.3c-0.7,0.2-1.2,0.3-1.6,0.3c-1.4,0-2.1-1-2.1-3.1v-4.9c0-1.6,0.2-2.8,0.7-3.5c0.5-0.7,1.4-1.4,2.8-2.1
+                                c3.5-1.8,7.7-3.3,12.6-4.5c4.9-1.3,10.1-1.9,15.6-1.9c11.9,0,20.6,2.7,26.2,8.1c5.5,5.4,8.3,13.6,8.3,24.6V66.4z M45.8,81.6
+                                c3.3,0,6.7-0.6,10.3-1.8c3.6-1.2,6.8-3.4,9.5-6.4c1.6-1.9,2.8-4,3.4-6.4c0.6-2.4,1-5.3,1-8.7v-4.2c-2.9-0.7-6-1.3-9.2-1.7
+                                c-3.2-0.4-6.3-0.6-9.4-0.6c-6.7,0-11.6,1.3-14.9,4c-3.3,2.7-4.9,6.5-4.9,11.5c0,4.7,1.2,8.2,3.7,10.6
+                                C37.7,80.4,41.2,81.6,45.8,81.6z M126.1,92.4c-1.8,0-3-0.3-3.8-1c-0.8-0.6-1.5-2-2.1-3.9L96.7,10.2c-0.6-2-0.9-3.3-0.9-4
+                                c0-1.6,0.8-2.5,2.4-2.5h9.8c1.9,0,3.2,0.3,3.9,1c0.8,0.6,1.4,2,2,3.9l16.8,66.2l15.6-66.2c0.5-2,1.1-3.3,1.9-3.9c0.8-0.6,2.2-1,4-1
+                                h8c1.9,0,3.2,0.3,4,1c0.8,0.6,1.5,2,1.9,3.9l15.8,67l17.3-67c0.6-2,1.3-3.3,2-3.9c0.8-0.6,2.1-1,3.9-1h9.3c1.6,0,2.5,0.8,2.5,2.5
+                                c0,0.5-0.1,1-0.2,1.6c-0.1,0.6-0.3,1.4-0.7,2.5l-24.1,77.3c-0.6,2-1.3,3.3-2.1,3.9c-0.8,0.6-2.1,1-3.8,1h-8.6c-1.9,0-3.2-0.3-4-1
+                                c-0.8-0.7-1.5-2-1.9-4L156,23l-15.4,64.4c-0.5-2-1.1,3.3-1.9,4c-0.8,0.7-2.2,1-4,1H126.1z M254.6,95.1c-5.2,0-10.4-0.6-15.4-1.8
+                                c-5-1.2-8.9-2.5-11.5-4c-1.6-0.9-2.7-1.9-3.1-2.8c-0.4-0.9-0.6-1.9-0.6-2.8v-5.1c0-2.1,0.8-3.1,2.3-3.1c0.6,0,1.2,0.1,1.8,0.3
+                                c0.6,0.2,1.5,0.6,2.5,1c3.4,1.5,7.1,2.7,11,3.5c4,0.8,7.9,1.2,11.9,1.2c6.3,0,11.2-1.1,14.6-3.3c3.4-2.2,5.2-5.4,5.2-9.5
+                                c0-2.8-0.9-5.1-2.7-7c-1.8-1.9-5.2-3.6-10.1-5.2L246,52c-7.3-2.3-12.7-5.7-16-10.2c-3.3-4.4-5-9.3-5-14.5c0-4.2,0.9-7.9,2.7-11.1
+                                c1.8-3.2,4.2-6,7.2-8.2c3-2.3,6.4-4,10.4-5.2c4-1.2,8.2-1.7,12.6-1.7c2.2,0,4.5,0.1,6.7,0.4c2.3,0.3,4.4,0.7,6.5,1.1
+                                c2,0.5,3.9,1,5.7,1.6c1.8,0.6,3.2,1.2,4.2,1.8c1.4,0.8,2.4,1.6,3,2.5c0.6,0.8,0.9,1.9,0.9,3.3v4.7c0,2.1-0.8,3.2-2.3,3.2
+                                c-0.8,0-2.1-0.4-3.8-1.2c-5.7-2.6-12.1-3.9-19.2-3.9c-5.7,0-10.2,0.9-13.3,2.8c-3.1,1.9-4.7,4.8-4.7,8.9c0,2.8,1,5.2,3,7.1
+                                c2,1.9,5.7,3.8,11,5.5l14.2,4.5c7.2,2.3,12.4,5.5,15.5,9.6c3.1,4.1,4.6,8.8,4.6,14c0,4.3-0.9,8.2-2.6,11.6
+                                c-1.8,3.4-4.2,6.4-7.3,8.8c-3.1,2.5-6.8,4.3-11.1,5.6C264.4,94.4,259.7,95.1,254.6,95.1z"/>
+                                <path d="M273.5,143.7c-32.9,24.3-80.7,37.2-121.8,37.2c-57.6,0-109.5-21.3-148.7-56.7c-3.1-2.8-0.3-6.6,3.4-4.4
+                                c42.4,24.6,94.7,39.5,148.8,39.5c36.5,0,76.6-7.6,113.5-23.2C274.2,133.6,278.9,139.7,273.5,143.7z"/>
+                                <path d="M287.2,128.1c-4.2-5.4-27.8-2.6-38.5-1.3c-3.2,0.4-3.7-2.4-0.8-4.5c18.8-13.2,49.7-9.4,53.3-5
+                                c3.6,4.5-1,35.4-18.6,50.2c-2.7,2.3-5.3,1.1-4.1-1.9C282.5,155.7,291.4,133.4,287.2,128.1z"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">AWS Academy Cloud Foundations</h3>
+                        <p class="card-body">Amazon Web Services (AWS) · Feb 2026</p>
+                        <div class="card-tags">
+                            <span>AWS Architecture</span><span>Cloud Computing</span>
+                        </div>
+                    </div>
+
+                    <!-- Bloomberg 1 -->
+                    <div class="achievement-card glassmorphism tilt-card" onclick="window.open('https://portal.bloombergforeducation.com/certificates/kigtQPVKEwiKSPdMD3se6Z2H', '_blank')">
+                        <div class="card-icon" style="font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; font-family: sans-serif;">Bloomberg</div>
+                        <h3 class="card-title">Bloomberg Spreadsheet Analysis</h3>
+                        <p class="card-body">Bloomberg · Dec 2025</p>
+                        <div class="card-tags">
+                            <span>BQL</span><span>Financial Modeling</span>
+                        </div>
+                    </div>
+
+                    <!-- Bloomberg 2 -->
+                    <div class="achievement-card glassmorphism tilt-card" onclick="window.open('https://portal.bloombergforeducation.com/certificates/wyZbRgmECTeCN3SykBCYwoXh', '_blank')">
+                        <div class="card-icon" style="font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; font-family: sans-serif;">Bloomberg</div>
+                        <h3 class="card-title">Bloomberg Market Concepts</h3>
+                        <p class="card-body">Bloomberg · Nov 2025</p>
+                        <div class="card-tags">
+                            <span>Stock Market Analysis</span><span>Terminal</span>
+                        </div>
+                    </div>
+
+                    <!-- Oracle 1 -->
+                    <div class="achievement-card glassmorphism tilt-card" onclick="window.open('https://catalog-education.oracle.com/ords/certview/sharebadge?id=B535BD4296838BBD92EC08632A3BFA10F470B84E4F8D0022738A95CFA5CCED7E', '_blank')">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 231 30" width="80" height="15" fill="currentColor">
+                                <path d="M99.61,19.52h15.24l-8.05-13L92,30H85.27l18-28.17a4.29,4.29,0,0,1,7-.05L128.32,30h-6.73l-3.17-5.25H103l-3.36-5.23m69.93,5.23V0.28h-5.72V27.16a2.76,2.76,0,0,0,.85,2,2.89,2.89,0,0,0,2.08.87h26l3.39-5.25H169.54M75,20.38A10,10,0,0,0,75,.28H50V30h5.71V5.54H74.65a4.81,4.81,0,0,1,0,9.62H58.54L75.6,30h8.29L72.43,20.38H75M14.88,30H32.15a14.86,14.86,0,0,0,0-29.71H14.88a14.86,14.86,0,1,0,0,29.71m16.88-5.23H15.26a9.62,9.62,0,0,1,0-19.23h16.5a9.62,9.62,0,1,1,0,19.23M140.25,30h17.63l3.34-5.23H140.64a9.62,9.62,0,1,1,0-19.23h16.75l3.38-5.25H140.25a14.86,14.86,0,1,0,0,29.71m69.87-5.23a9.62,9.62,0,0,1-9.26-7h24.42l3.36-5.24H200.86a9.61,9.61,0,0,1,9.26-7h16.76l3.35-5.25h-20.5a14.86,14.86,0,0,0,0,29.71h17.63l3.35-5.23h-20.6"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Oracle Data Science Professional</h3>
+                        <p class="card-body">Oracle · Aug 2025</p>
+                        <div class="card-tags">
+                            <span>Data Science</span><span>Machine Learning</span>
+                        </div>
+                    </div>
+
+                    <!-- Oracle 2 -->
+                    <div class="achievement-card glassmorphism tilt-card" onclick="window.open('https://catalog-education.oracle.com/ords/certview/sharebadge?id=CE8517381AC5A3A738563AF8E8998E962E5A266C19196DE8D5392E9307C55C2A', '_blank')">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 231 30" width="80" height="15" fill="currentColor">
+                                <path d="M99.61,19.52h15.24l-8.05-13L92,30H85.27l18-28.17a4.29,4.29,0,0,1,7-.05L128.32,30h-6.73l-3.17-5.25H103l-3.36-5.23m69.93,5.23V0.28h-5.72V27.16a2.76,2.76,0,0,0,.85,2,2.89,2.89,0,0,0,2.08.87h26l3.39-5.25H169.54M75,20.38A10,10,0,0,0,75,.28H50V30h5.71V5.54H74.65a4.81,4.81,0,0,1,0,9.62H58.54L75.6,30h8.29L72.43,20.38H75M14.88,30H32.15a14.86,14.86,0,0,0,0-29.71H14.88a14.86,14.86,0,1,0,0,29.71m16.88-5.23H15.26a9.62,9.62,0,0,1,0-19.23h16.5a9.62,9.62,0,1,1,0,19.23M140.25,30h17.63l3.34-5.23H140.64a9.62,9.62,0,1,1,0-19.23h16.75l3.38-5.25H140.25a14.86,14.86,0,1,0,0,29.71m69.87-5.23a9.62,9.62,0,0,1-9.26-7h24.42l3.36-5.24H200.86a9.61,9.61,0,0,1,9.26-7h16.76l3.35-5.25h-20.5a14.86,14.86,0,0,0,0,29.71h17.63l3.35-5.23h-20.6"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">MySQL HeatWave Implementation</h3>
+                        <p class="card-body">Oracle Certified Associate · Aug 2025</p>
+                        <div class="card-tags">
+                            <span>MySQL</span><span>HeatWave</span><span>Databases</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
