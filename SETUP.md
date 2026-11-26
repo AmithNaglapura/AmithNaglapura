@@ -14,7 +14,7 @@ About 15 minutes. You need two free accounts: **Supabase** (database, owner sign
 2. Open **SQL Editor → New query**, paste all of `supabase-setup.sql`, and click **Run**.
 3. **Authentication → Users → Add user → Create new user**: email `amithnaglapura@gmail.com`, tick *Auto confirm user*.
 4. **Authentication → Sign In / Providers**: keep **Email** on, and turn **off** *Allow new users to sign up*. Nobody else can then create an account.
-5. **Authentication → Emails → Magic Link** template: make sure the body contains `{{ .Token }}` (for example: `Your sign-in code is {{ .Token }}`). That is the 6-digit code the admin page asks for.
+5. **Authentication → URL Configuration → Site URL**: set it to your `admin.html` address. The sign-in email's link brings you back there, signed in.
 6. **Project Settings → API Keys**: copy the **Project URL** and the **publishable** key (`sb_publishable_…`; on older projects, the `anon public` key).
    **Never** copy the `secret` / `service_role` key into any file.
 
@@ -45,14 +45,14 @@ These values are designed to be public. The protection comes from the database r
 ## 5. Test it
 
 1. Open the live site, go to **Contact**, and send yourself a message. It should arrive in Gmail and show in the dashboard inbox.
-2. Open `admin.html`, enter your email, and type the code you receive.
+2. Open `admin.html`, enter your email, and click the link in the email you receive.
 
 The contact form and tracking only work on the live site. The claude.ai preview blocks calls to other websites, so there the form shows "email me directly" instead.
 
 ## How it is protected
 
 - **Write-only public access.** Visitors can only add messages and page views. Reading, editing and deleting are allowed only for a signed-in user whose verified email is `amithnaglapura@gmail.com`. Supabase enforces this in the database (Row Level Security), so reading the page source doesn't help anyone.
-- **Owner-only sign-in.** Sign-ups are disabled, and the code is emailed only to you. Sessions last for the open tab only and end after 30 minutes idle.
+- **Owner-only sign-in.** Sign-ups are disabled, and the sign-in link is emailed only to you. Sessions last for the open tab only and end after 30 minutes idle.
 - **Input limits.** Every field has a length limit and email format checks in the database. A trigger rejects floods of more than 30 messages or 600 page views in 10 minutes.
 - **Spam filtering.** A hidden honeypot field, a minimum fill time, and a one-message-per-minute limit per browser.
 - **Safe display.** Message content is always shown as text, never as HTML, so a malicious message can't run code in your dashboard. The dashboard has a strict Content Security Policy and is marked `noindex`.
